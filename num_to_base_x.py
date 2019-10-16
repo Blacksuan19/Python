@@ -1,3 +1,4 @@
+# convert a decimal number to any provided base
 import math
 num = int(input("enter decimal number to convert: "))
 base = int(input("enter base to convrt number to: "))
