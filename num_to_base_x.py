@@ -36,4 +36,4 @@ def num_to_base_x(num, base):
     return final
 
 
-print(num_to_base_x(num, base))
+print(num, "in base", base, "is:", num_to_base_x(num, base))
