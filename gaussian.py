@@ -46,16 +46,17 @@ def gauss(coeff, b):
     return back_substitution(coeff, b, n)
 
 
-# the coefficents array
-coeff = np.array([[1, 5, 1],
-                 [1, -2, -2],
-                 [1, 4, -4]])
+if __name__ == "__main__":
+    # the coefficents array
+    coeff = np.array([[1, 5, 1],
+                     [1, 2, 2],
+                     [1, 4, 4]])
 
-# the right side array
-right_side = np.array([0, 4, 2])
-result = gauss(coeff, right_side)
+    # the right side array
+    right_side = np.array([0, 4, 2])
+    result = gauss(coeff, right_side)
 
-print('Gauss result is: \n')
-print('X = ', str(result[0]).replace("[", "").replace("]", ""),
-      '\nY = ', str(result[1]).replace("[", "").replace("]", ""),
-      '\nZ = ', str(result[2]).replace("[", "").replace("]", ""))
+    print('Gauss result is: \n')
+    print('X = ', str(result[0]).replace("[", "").replace("]", ""),
+          '\nY = ', str(result[1]).replace("[", "").replace("]", ""),
+          '\nZ = ', str(result[2]).replace("[", "").replace("]", ""))
