@@ -33,9 +33,7 @@ if __name__ == "__main__":
     string = input("Enter string: ")
     shift = int(input("Enter shift amount: "))
     operation = int(input("Enter Operation to perform(1 = cypher, 0 = decypher): "))
-    if type(operation) != int:
-        raise TypeError("operation has to 1 or 0")
     print("String: ", string)
     print("Shift Amount: ", shift)
-    print("Operation: " + "Cypher" if(operation == 1) else "Decypher")
+    print("Operation: ", "Cypher" if(operation == 1) else "Decypher")
     print("Result: ", caeser.docipher(string, shift, operation))
