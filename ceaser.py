@@ -1,7 +1,7 @@
 class Caesar():
     """cypher and decypher caeser's cipher """
 
-    alphabets = 26 # number of alphabets so we wont go above it
+    alphabets = 26  # number of alphabets so we wont go above it
 
     def docipher(self, message, shiftAmount, operation):
         """cypher a given message with agiven amount of shift vlue
@@ -13,26 +13,32 @@ class Caesar():
 
         results = ""
         for char in message:
-            asciirep = ord(char) # get ascii represenation
-            if operation == 1: # cypher
+            asciirep = ord(char)  # get ascii represenation
+            if operation == 1:  # cypher
                 if char.isupper():
-                    asciirep = (asciirep + shiftAmount - 65) % self.alphabets + 65
+                    asciirep = (asciirep + shiftAmount -
+                                65) % self.alphabets + 65
                 else:
-                    asciirep = (asciirep + shiftAmount - 97) % self.alphabets + 97
-            else: # decypher
+                    asciirep = (asciirep + shiftAmount -
+                                97) % self.alphabets + 97
+            else:  # decypher
                 if char.isupper():
-                    asciirep = (asciirep - shiftAmount - 65) % self.alphabets + 65
+                    asciirep = (asciirep - shiftAmount -
+                                65) % self.alphabets + 65
                 else:
-                    asciirep = (asciirep - shiftAmount - 97) % self.alphabets + 97
+                    asciirep = (asciirep - shiftAmount -
+                                97) % self.alphabets + 97
 
-            results += chr(asciirep) # back to char and add to results
+            results += chr(asciirep)  # back to char and add to results
         return results
 
+
 if __name__ == "__main__":
-    caeser = Caesar() # instanciate the class
+    caeser = Caesar()  # instanciate the class
     string = input("Enter string: ")
     shift = int(input("Enter shift amount: "))
-    operation = int(input("Enter Operation to perform(1 = cypher, 0 = decypher): "))
+    operation = int(
+        input("Enter Operation to perform(1 = cypher, 0 = decypher): "))
     print("String: ", string)
     print("Shift Amount: ", shift)
     print("Operation: ", "Cypher" if(operation == 1) else "Decypher")

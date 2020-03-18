@@ -49,8 +49,8 @@ def gauss(coeff, b):
 if __name__ == "__main__":
     # the coefficents array
     coeff = np.array([[1, 5, 1],
-                     [1, 2, 2],
-                     [1, 4, 4]])
+                      [1, 2, 2],
+                      [1, 4, 4]])
 
     # the right side array
     right_side = np.array([0, 4, 2])
